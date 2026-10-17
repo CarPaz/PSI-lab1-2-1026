@@ -27,3 +27,6 @@ def cuadrada(f, fs, duracion, amplitud=1.0):
     """Onda cuadrada de frecuencia f [Hz] muestreada a fs [Hz] durante duracion [s]."""
     t, x = senoidal(f, fs, duracion, amplitud=amplitud)
     return t, np.sign(x)
+
+#modificaci`on de prueba para cache
+# `

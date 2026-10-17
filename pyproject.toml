@@ -14,6 +14,8 @@ dependencies = [
 ]
 [project.optional-dependencies]
 dev = ["pytest>=8", "ruff>=0.5"]
+notebook = ["jupyterlab"]
+
 [project.scripts]
 
 psi-demo = "psi_lab.cli:main"
