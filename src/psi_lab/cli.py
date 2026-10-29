@@ -10,6 +10,8 @@ except ModuleNotFoundError as exc:  # pragma: no cover - depende del entorno
     raise RuntimeError("La dependencia 'matplotlib' no está instalada.") from exc
 
 from psi_lab.senales import espectro, senoidal
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(
         prog="psi-demo",
