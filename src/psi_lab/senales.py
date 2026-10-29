@@ -22,7 +22,6 @@ def espectro(x, fs):
     amp = np.abs(np.fft.rfft(x)) / n
     # Duplicar todo salvo DC (y Nyquist si n es par): la energia de las
     # frecuencias negativas se suma a las positivas.
-    amp[1 : (n + 1) // 2] *= 2
     return freqs, amp
 
 def cuadrada(f, fs, duracion, amplitud=1.0):
