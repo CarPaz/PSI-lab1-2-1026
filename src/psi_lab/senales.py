@@ -1,5 +1,7 @@
 """Generacion de senales muestreadas y espectro de amplitud."""
 import numpy as np
+
+
 def senoidal(f, fs, duracion, amplitud=1.0, fase=0.0):
     """Senoidal de frecuencia f [Hz] muestreada a fs [Hz] durante duracion [s].
 
@@ -26,7 +28,7 @@ def espectro(x, fs):
 def cuadrada(f, fs, duracion, amplitud=1.0):
     """Onda cuadrada de frecuencia f [Hz] muestreada a fs [Hz] durante duracion [s]."""
     t, x = senoidal(f, fs, duracion, amplitud=amplitud)
-    return t, np.sign(x)
+    return t, amplitud * np.sign(x)
 
 #modificaci`on de prueba para cache
 # `
