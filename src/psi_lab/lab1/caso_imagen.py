@@ -1,0 +1,1 @@
+"""Caso aplicado C: Fourier 2D, ruido periodico, filtros notch y aliasing."""

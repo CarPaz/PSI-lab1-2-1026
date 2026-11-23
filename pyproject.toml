@@ -11,6 +11,7 @@ authors = [{ name = "Nombre Apellido", email = "nombre.apellido@usach.cl" }]
 dependencies = [
 "numpy>=1.26",
 "matplotlib>=3.8",
+"scikit-image>=0.25",
 ]
 [project.optional-dependencies]
 dev = ["pytest>=8", "ruff>=0.5"]

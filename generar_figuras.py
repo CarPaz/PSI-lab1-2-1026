@@ -20,7 +20,7 @@ import numpy as np
 
 from psi_lab.lab1.convolucion import convolucion_directa, convolucion_fft
 from psi_lab.lab1.dft import dft, espectro
-from psi_lab.lab1.filtros import fir_pasabajos, filtrar, respuesta_frecuencia
+from psi_lab.lab1.filtros import filtrar, fir_pasabajos, respuesta_frecuencia
 from psi_lab.lab1.muestreo import frecuencia_alias, muestrear
 
 
@@ -33,7 +33,7 @@ def tarea1_muestreo():
     print(f"{'f [Hz]':<10} | {'Alias Teorico':<15} | {'Alias Medido'}")
     print("-" * 45)
     for f in frecuencias:
-        t, x = muestrear(lambda t, f=f: np.cos(2 * np.pi * f * t), fs, duracion=2)
+        _, x = muestrear(lambda t, f=f: np.cos(2 * np.pi * f * t), fs, duracion=2)
         freqs, amp = espectro(x, fs)
         f_medida = freqs[np.argmax(amp)]
         f_teorica = frecuencia_alias(f, fs)
