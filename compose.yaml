@@ -1,4 +1,14 @@
 services:
+  imagenes:
+    build:
+      context: .
+      target: runtime
+    image: psi-lab:runtime
+    entrypoint: ["python", "-m", "psi_lab.lab1.image_experiments", "--output-dir", "/out/caso_c"]
+    command: []
+    volumes:
+      - ./out:/out
+      - ./data:/data:ro
   demo:
     build:
       context: .

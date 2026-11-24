@@ -53,3 +53,14 @@ Solo NumPy; `np.fft` y `np.convolve` se usan únicamente en las pruebas como ref
 | `filtros` | `fir_pasaaltos`, `fir_pasabanda(f1, f2, ...)`, `fir_rechazabanda(f1, f2, ...)` | igual que arriba | coeficientes h simétricos (fase lineal) |
 | `filtros` | `respuesta_frecuencia(h, fs, n=4096)` | h, fs [Hz] | `(freqs [Hz] en [0, fs/2], H complejo)` |
 | `filtros` | `filtrar(x, h)` | señal y coeficientes | señal filtrada del mismo largo, sin retardo |
+
+
+## Caso C: Fourier 2D, ruido periódico y aliasing espacial
+
+Ejecutar `python -m psi_lab.lab1.image_experiments` o
+`docker compose run --rm imagenes`. Las figuras, métricas y explicaciones
+se guardan en `out/caso_c/`.
+
+La [guía del caso C](docs/caso_c.md) documenta las funciones, unidades,
+parámetros, pruebas y el uso de `--real-image` para una foto con interferencia
+real. Sin esa entrada el programa marca C4 como pendiente.
