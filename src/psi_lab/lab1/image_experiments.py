@@ -316,7 +316,7 @@ def _discussion(directory, metrics, fir_records, real_result):
         ("PENDIENTE: no se suministró una fotografía o escaneo con interferencia "
          "real. Las fotografías camera y astronaut con ruido agregado pertenecen "
          "al experimento controlado y NO completan C4. Ejecutar nuevamente con "
-         "--real-image data/foto.png cuando se disponga de esa imagen."
+         "--real-image data/foto.jpg cuando se disponga de esa imagen."
          if real_result is None else
          f"Imagen procesada: {real_result['source']}. Recorte sin remuestreo "
          f"[x,y,ancho,alto]: {real_result['crop_x_y_width_height']}. Se detectaron "

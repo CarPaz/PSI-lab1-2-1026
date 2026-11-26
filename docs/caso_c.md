@@ -136,14 +136,14 @@ de sensor con franjas reales. Agregar un coseno a `camera` **no completa C4**.
 Guardar la imagen en `data/` y ejecutar, por ejemplo:
 
 ```powershell
-.venv/Scripts/python.exe -m psi_lab.lab1.image_experiments --real-image data/foto.png
+.venv/Scripts/python.exe -m psi_lab.lab1.image_experiments --real-image data/foto.jpg
 
 # Si la interferencia está en una región particular:
-.venv/Scripts/python.exe -m psi_lab.lab1.image_experiments --real-image data/foto.png --real-crop 0 0 512 512
+.venv/Scripts/python.exe -m psi_lab.lab1.image_experiments --real-image data/foto.jpg --real-crop 0 0 512 512
 ```
 
 ```bash
-docker compose run --rm imagenes --real-image /data/foto.png
+docker compose run --rm imagenes --real-image /data/foto.jpg
 ```
 
 El recorte predeterminado toma hasta 512×512 píxeles del centro sin remuestrear,

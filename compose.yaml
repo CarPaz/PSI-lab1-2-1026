@@ -12,8 +12,8 @@ services:
         mkdir -p /out/parte_comun
         cd /out/parte_comun
         python /app/generar_figuras.py
-        if [ -f /data/foto.png ]; then
-          python -m psi_lab.lab1.image_experiments --output-dir /out/caso_c --real-image /data/foto.png --max-pairs 8
+        if [ -f /data/foto.jpg ]; then
+          python -m psi_lab.lab1.image_experiments --output-dir /out/caso_c --real-image /data/foto.jpg --real-crop 900 900 512 512 --max-pairs 8
         else
           python -m psi_lab.lab1.image_experiments --output-dir /out/caso_c
         fi
