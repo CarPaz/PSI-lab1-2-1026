@@ -38,7 +38,12 @@ jobs:
       - run: docker compose build
       - run: docker compose run --rm tests
       - run: docker compose run --rm demo
+      - run: docker compose run --rm lab1
       - uses: actions/upload-artifact@v4
         with:
           name: demo-figura
           path: out/demo.png
+      - uses: actions/upload-artifact@v4
+        with:
+          name: caso-c-figuras
+          path: out/caso_c
