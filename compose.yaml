@@ -1,4 +1,26 @@
 services:
+  lab1:
+    build:
+      context: .
+      target: dev
+    image: psi-lab:dev
+    entrypoint:
+      - sh
+      - -c
+      - |
+        set -e
+        mkdir -p /out/parte_comun
+        cd /out/parte_comun
+        python /app/generar_figuras.py
+        if [ -f /data/foto.jpg ]; then
+          python -m psi_lab.lab1.image_experiments --output-dir /out/caso_c --real-image /data/foto.jpg --real-crop 900 900 512 512 --max-pairs 8
+        else
+          python -m psi_lab.lab1.image_experiments --output-dir /out/caso_c
+        fi
+    volumes:
+      - ./out:/out
+      - ./data:/data:ro
+      - ./generar_figuras.py:/app/generar_figuras.py:ro
   imagenes:
     build:
       context: .
